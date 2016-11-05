@@ -39,44 +39,49 @@
       <!-- end Header -->
 
       <!-- Menu -->
-          <section id="menu">
-
-            <!-- Links -->
-              <section>
-                <ul class="links">
-                  {% for post in site.posts limit: 5 %}
-                    <li>
-                      <a href="{{ site.baseurl }}{{ post.url }}">
-                        <h3>{{ post.title }}</h3>
-                        <p>{ post.excerpt | spoiler, 50}}</p>
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </section>
-
-            <!-- Actions -->
-              <!-- <section>
-                <ul class="actions vertical">
-                  <li><a href="#" class="button big fit">Log In</a></li>
-                </ul>
-              </section> -->
-
-          </section>
+        <section id="menu">
+          <!-- Links -->
+            <section>
+              <ul class="links">
+                {% for post in site.posts limit: 5 %}
+                  <li>
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                      <h3>{{ post.title }}</h3>
+                      <p>{ post.excerpt | spoiler, 50}}</p>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </section>
+          <!-- Actions -->
+            <!-- <section>
+              <ul class="actions vertical">
+                <li><a href="#" class="button big fit">Log In</a></li>
+              </ul>
+            </section> -->
+        </section>
+      <!-- end Menu -->
 
       <div id="main" role="main" class="container">
         {{ content }}
       </div>
 
-      <div class="wrapper-footer">
-        <div class="container">
-          <footer class="footer">
+      <!-- Footer -->
+        <section id="footer">
+          <ul class="icons">
             {% include svg-icons.html %}
-          </footer>
-        </div>
-      </div>
+          </ul>
+        </section>
+      <!-- end Footer -->
 
       {% include analytics.html %}
     </main>
+
+    <!-- Scripts -->
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/skel.min.js"></script>
+    <script src="{{ site.baseurl }}/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="{{ site.baseurl }}/js/main.js"></script>
   </body>
 </html>
