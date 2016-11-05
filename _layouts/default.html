@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/custom-edits.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
@@ -48,7 +49,7 @@
                   <li>
                     <a href="{{ site.baseurl }}{{ post.url }}">
                       <h3>{{ post.title }}</h3>
-                      <p>{ post.excerpt | spoiler, 50}}</p>
+                      <p>{ post.excerpt limit:10 }}</p>
                     </a>
                   </li>
                 {% endfor %}
