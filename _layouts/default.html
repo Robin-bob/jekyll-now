@@ -10,13 +10,14 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
+    <!-- <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
@@ -32,20 +33,48 @@
           </nav>
         </header>
       </div>
-    </div>
+    </div> -->
+    <main id="wrapper">
+      <!-- Header -->
+        <header id="header">
+          <h1><a href="#">Future Imperfect</a></h1>
+          <nav class="links">
+            <ul>
+              <li><a href="#">Lorem</a></li>
+              <li><a href="#">Ipsum</a></li>
+              <li><a href="#">Feugiat</a></li>
+              <li><a href="#">Tempus</a></li>
+              <li><a href="#">Adipiscing</a></li>
+            </ul>
+          </nav>
+          <nav class="main">
+            <ul>
+              <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="#">
+                  <input type="text" name="query" placeholder="Search" />
+                </form>
+              </li>
+              <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+      <div id="main" role="main" class="container">
+        {{ content }}
       </div>
-    </div>
 
-    {% include analytics.html %}
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            {% include svg-icons.html %}
+          </footer>
+        </div>
+      </div>
+
+      {% include analytics.html %}
+    </main>
   </body>
 </html>
