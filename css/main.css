@@ -3035,6 +3035,7 @@
       height: inherit;
       line-height: inherit;
       text-align: right;
+      display: none;
     }
 
       #header .main ul {
