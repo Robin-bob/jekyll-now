@@ -1,0 +1,39 @@
+<!-- Post -->
+  <article class="post">
+
+    <header>
+      <div class="title">
+        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+      </div>
+      <div class="meta">
+        <time class="published" datetime="???">{{ page.date | date: "%B %e, %Y" }}</time>
+        <a href="{{ site.baseurl }}/about" class="author"><span class="name">Makoed Viktor</span><img src="{{ site.avatar }}" alt="" /></a>
+      </div>
+    </header>
+    
+    <a href="{{ site.baseurl }}{{ post.url }}" class="image featured">
+      {% assign foundImage = 0 %}
+      {% assign images = post.content | split:"<img " %}
+      {% for image in images %}
+        {% if image contains 'src' %}
+          {% if foundImage == 0 %}
+            {% assign html = image | split:"/>" | first %}
+              <img {{ html }} />
+            {% assign foundImage = 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </a>
+
+    <p>
+      {{ post.excerpt }}
+    </p>
+
+    <footer>
+      <ul class="actions">
+        <li><a href="{{ site.baseurl }}{{ post.url }}" class="button big">Continue Reading</a></li>
+      </ul>
+    </footer>
+
+  </article>
+<!-- End Post -->
